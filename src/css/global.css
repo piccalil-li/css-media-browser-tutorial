@@ -45,3 +45,27 @@ a {
   top: 0;
   left: 0;
 }
+
+.skip-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem 0.6rem 1.5rem;
+  background: #efd6da;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 99;
+  text-decoration: none;
+}
+
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
