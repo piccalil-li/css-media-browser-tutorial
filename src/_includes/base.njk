@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Media Browser</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <main>
+    <h1>Watching: {{ title }}</h1>
+    <div class="media-browser">
+      <a class="skip-link" href="#video-nav">Skip to the video navigation</a>
+      <div class="media-browser__video">
+        <div class="video-player">
+          <iframe src="https://player.vimeo.com/video/{{ vimeoId }}?color=666&title=0&byline=0&portrait=0&autoplay=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+      <nav class="media-browser__nav" aria-label="Videos" id="video-nav" tabindex="-1">
+        <ol class="media-browser__links">
+          {% for item in collections.videos %}
+            <li>
+              <a href="{{ item.url }}"{% if item.url === page.url %} aria-current="page"{% endif %}>{{ item.data.title }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+    </div>
+    <p>Info: this is a demo for the Piccalilli tutorial: <a href="https://piccalil.li/tutorial/build-a-responsive-media-browser-with-css">“Build a responsive media browser with CSS”</a>.
+  </main> 
+</body>
+</html>
