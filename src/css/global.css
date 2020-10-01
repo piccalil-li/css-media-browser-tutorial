@@ -69,3 +69,38 @@ a {
   width: 1px;
   white-space: nowrap;
 }
+
+.media-browser {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 2.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.media-browser__nav {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 16rem;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.media-browser__video {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 60%;
+  background: black;
+}
+
+.media-browser__nav > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  min-height: 10rem;
+}
