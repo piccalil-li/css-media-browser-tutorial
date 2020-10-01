@@ -104,3 +104,27 @@ a {
   position: relative;
   min-height: 10rem;
 }
+
+.media-browser__links > * + * {
+  border-top: 1px solid #cccccc;
+}
+
+.media-browser__links a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  line-height: 1.2;
+  background: #f3f3f3;
+}
+
+.media-browser__links :hover {
+  background: #e5bec4;
+}
+
+.media-browser__links :focus {
+  outline-offset: -0.25rem;
+}
+
+.media-browser__links a[aria-current='page'] {
+  border-left: 0.4rem solid #444444;
+}
