@@ -128,3 +128,21 @@ a {
 .media-browser__links a[aria-current='page'] {
   border-left: 0.4rem solid #444444;
 }
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8eef0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+/* Color order: thumb, then track */
+* {
+  scrollbar-color: #444444 #f8eef0;
+}
